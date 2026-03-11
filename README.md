@@ -47,6 +47,70 @@ The following test cases were automated:
 - **Test Case 15**: Place Order: Register before Checkout
 
 
+## Design and Automation Strategy
+
+### 1. Page Object Model (POM)
+
+The project uses **Page Object Model** to separate page interactions from test logic.
+
+This approach makes the code easier to:
+
+- read
+- maintain
+- reuse
+- update when selectors change
+
+Examples of page objects implemented in this project:
+
+- `HomePage`
+- `LoginPage`
+- `ProductsPage`
+- `CartPage`
+- `ContactPage`
+
+
+### 2. Fixture for Authenticated Scenarios
+
+A reusable fixture was created for scenarios that require a user already created and authenticated.
+
+This fixture dynamically creates a user and prepares the test environment before execution.
+
+It is mainly used for scenarios that require login before the main flow, such as:
+
+- Logout
+- Place Order
+
+Using fixtures improves:
+
+- test isolation
+- test reliability
+- code reuse
+
+
+### 3. Cross-Browser Execution
+
+Tests run across multiple browsers supported by Playwright:
+
+- Chromium
+- Firefox
+- WebKit
+
+During implementation, some browser-specific behaviors were identified, including:
+
+- third-party advertisements
+- overlay elements blocking interactions
+- popup dialogs
+- strict locator conflicts caused by duplicate elements
+
+To improve stability across browsers, the following strategies were applied:
+
+- improved locator strategies
+- scoped selectors
+- explicit waits when required
+- fixture-based authentication
+- handling of unexpected dialogs or external behaviors
+
+
 ## Project Structure
 
 ```bash
