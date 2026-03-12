@@ -46,6 +46,22 @@ The following test cases were automated:
 - **Test Case 10**: Verify Subscription in home page
 - **Test Case 15**: Place Order: Register before Checkout
 
+## Manual Test Documentation
+
+The manual test documentation for the mobile feature is available in:
+
+- `manual-tests/manual-tests.xlsx`
+
+If needed, the same content can also be accessed through Google Sheets:
+
+- [Google Sheets version](https://docs.google.com/spreadsheets/d/1-KYpubY1cFcKgMH530euotplYJ38NEVQX_4qHWGIjaA/edit?usp=sharing)
+
+The spreadsheet contains the following tabs:
+
+- **Test Cases**
+- **Test Execution**
+- **Bug Reports**
+
 
 ## Design and Automation Strategy
 
@@ -123,6 +139,9 @@ qa-desafio-amigotech
 ├── fixtures/
 │   └── userFixture.ts
 │
+├── manual-tests/
+│   └── manual-tests.xlsx
+│
 ├── pages/
 │   ├── cartPage.ts
 │   ├── contactPage.ts
@@ -149,3 +168,74 @@ qa-desafio-amigotech
 ├── package.json
 ├── playwright.config.ts
 └── README.md
+
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/brunadmelo/qa-desafio-amigotech.git
+```
+
+Navigate to the project folder:
+
+```bash
+cd qa-desafio-amigotech
+```
+
+Install project dependencies:
+
+```bash
+npm install
+```
+
+Install Playwright browsers:
+
+```bash
+npx playwright install
+```
+
+
+## Running the Tests
+
+Run all automated tests:
+
+```bash
+npx playwright test
+```
+
+Run tests with the browser visible:
+
+```bash
+npx playwright test --headed
+```
+
+Run a specific test file:
+
+```bash
+npx playwright test tests/login-success.spec.ts
+```
+
+Run tests in a specific browser (example: Chromium):
+
+```bash
+npx playwright test --project=chromium
+```
+
+Run tests in debug mode:
+
+```bash
+npx playwright test --debug
+```
+
+
+## Test Reports
+
+After the test execution, Playwright automatically generates an HTML report.
+
+To open the report locally:
+
+```bash
+npx playwright show-report
+```
