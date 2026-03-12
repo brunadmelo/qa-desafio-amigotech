@@ -168,6 +168,7 @@ qa-desafio-amigotech
 ├── package.json
 ├── playwright.config.ts
 └── README.md
+```
 
 
 ## Installation
@@ -176,7 +177,6 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/brunadmelo/qa-desafio-amigotech.git
-```
 
 Navigate to the project folder:
 
